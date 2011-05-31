@@ -36,8 +36,10 @@ public class MonthView extends TableLayout{
 			R.string.thursday,R.string.friday,R.string.saturday,R.string.sunday};
 	private String[] days;
 	
-	private String[] months={"January","February","March","April","May","June","July","August",
-			"September","October","November","December"};
+	private int[] monthIds = {R.string.january,R.string.february,R.string.march,R.string.april,R.string.may,R.string.june,
+			R.string.july,R.string.august,R.string.september,R.string.october,R.string.november,R.string.december};
+	
+	private String[] months = new String[12];
 	
 	Calendar cal,prevCal,today;	//today will be used for setting a box around today's date
 	//prevCal will be used to display last few dates of previous month in the calendar 
@@ -53,6 +55,10 @@ public class MonthView extends TableLayout{
 	private void init(Context contxt)
 	{
 		context = contxt; //initializing the context variable
+		Resources res = getResources();
+		for(int i=0;i<12;i++)
+			months[i] = res.getString(monthIds[i]);
+		
 		days = new String[7];
 		setStretchAllColumns(true); //stretch all columns so that calendar's width fits the screen
 		today = Calendar.getInstance();//get current date and time's instance 
@@ -66,6 +72,11 @@ public class MonthView extends TableLayout{
 
 		
 		DisplayMonth(true);//uses cal and prevCal to display the month
+	}
+	public void GoToDate(Date date)
+	{
+		cal.setTime(date);
+		DisplayMonth(true);
 	}
 	private boolean animFlag=false;
 	//Change month listener called when the user clicks to show next or prev month.

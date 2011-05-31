@@ -32,10 +32,22 @@ public final class R {
         public static final int monthtop=0x7f030001;
     }
     public static final class string {
-        public static final int app_name=0x7f040007;
+        public static final int app_name=0x7f040013;
+        public static final int april=0x7f04000a;
+        public static final int august=0x7f04000e;
+        public static final int december=0x7f040012;
+        public static final int february=0x7f040008;
         public static final int friday=0x7f040005;
+        public static final int january=0x7f040007;
+        public static final int july=0x7f04000d;
+        public static final int june=0x7f04000c;
+        public static final int march=0x7f040009;
+        public static final int may=0x7f04000b;
         public static final int monday=0x7f040001;
+        public static final int november=0x7f040011;
+        public static final int october=0x7f040010;
         public static final int saturday=0x7f040006;
+        public static final int september=0x7f04000f;
         public static final int sunday=0x7f040000;
         public static final int thursday=0x7f040004;
         public static final int tuesday=0x7f040002;
