@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cw_previous_month">Previous month</string>
+    <string name="cw_next_month">Next month</string>
+    <string name="cw_selected_date_description">Selected date</string>
+</resources>
